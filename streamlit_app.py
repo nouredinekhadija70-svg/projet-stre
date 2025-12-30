@@ -298,6 +298,7 @@ with st.sidebar:
     for i, example in enumerate(example_datasets[st.session_state.language]):
         if st.button(f"📝 Exemple {i+1}", key=f"example_{i}", use_container_width=True):
             st.session_state.current_text = example
+            st.session_state.text_input = example
             st.rerun()
     
     st.markdown("---")
